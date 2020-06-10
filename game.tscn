@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://game.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/equipaments/EquipmentPro.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[node name="game" type="Node2D"]
+script = ExtResource( 1 )
+dungeon_levels = 5
+
+[node name="world" type="YSort" parent="."]
+
+[node name="GUI" type="CanvasLayer" parent="world"]
+
+[node name="level" type="Label" parent="world/GUI"]
+margin_left = 0.880249
+margin_top = 145.242
+margin_right = 77.8802
+margin_bottom = 159.242
+custom_fonts/font = SubResource( 1 )
+text = "Level:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
